@@ -23,14 +23,16 @@
     <%= f.label :message %><br />
     <%= f.text_field :message %>
   </div>
-  <!-- <div class="field">
+  <div class="field">
     <%= f.label :image %><br />
     <%= f.text_field :image %>
   </div>
   <div class="field">
     <%= f.label :sound %><br />
     <%= f.text_field :sound %>
-  </div> -->
+  </div>
+  <%= link_to 'Get tracks', get_tracks(@card), :class => "button-primary" %>
+
   <div class="actions">
     <%= f.submit 'Submit', :class => 'btn btn-primary' %>
   </div>

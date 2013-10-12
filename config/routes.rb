@@ -8,6 +8,7 @@ Sndcrd::Application.routes.draw do
   # You can have the root of your site routed with "root"
   
   root to: 'cards#index'
+  get '/cards/get_tracks/:id', to: 'cards#get_tracks', as: 'get_tracks'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
