@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+.clear {
+  clear: both;
+}
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  margin: 0px;
+  padding: 0px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light";
+}
+#header {
+  width: 100%;
+  height: 45px;
+  border-top: 5px solid #D86046;
+  background-color: #F26C4F;
+  padding-top: 5px;
+}
+#logo {
+  height: 40px;
+  position: absolute 
+  left: 0;
+  top: 100%;
+}
+div.box {
+  text-align: center;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #333333;
+}
+div.title {
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+div#cardImage {
+  position: relative;
+  min-width: 400px;
+  min-height: 400px;
+  overflow: hidden;
+}
+div#cardControls {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 94px;
+}
+.iconButton {
+  width: 32px;
+  height: 31px;
+  float: left;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.iconButton.last {
+  margin-right: 0px;
+}
+.play {
+  background-image: url(/assets/icon_play.png);
+}
+.play:hover {
+  background-image: url(/assets/icon_play_hover.png);
+}
+.pause {
+  background-image: url(/assets/icon_pause.png);
+}
+.pause:hover {
+  background-image: url(/assets/icon_pause_hover.png);
+}
+.mute {
+  background-image: url(/assets/icon_mute.png);
+}
+.mute:hover {
+  background-image: url(/assets/icon_mute_hover.png);
+}
+div#cardMessage {
+  color: #FFFFFF;
+}
+div#cardDetails {
+  width: 100%;
+  color: #999999;
+  padding: 10px;
+}
+div#cardMessage {
+  
+}
+.details, .detail.nohover {
+  padding: 5px 10px;
+  background-color: #FFFFFF;
+  color: #F26C4F;
+  margin: 0 5px;
+}
+#properties {
+  border-top: 1px solid #000000;
+  padding-top: 10px;
+  margin-top: -30px;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.details:hover {
+  background-color: #F26C4F;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+#properties {
+  margin-top: 30px;
+}
