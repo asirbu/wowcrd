@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Getting started &middot; Flat UI Free</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/wow.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .clear {
+        clear: both;
+      }
+      body {
+        background-color: #000000;
+        color: #FFFFFF;
+        margin: 0px;
+        padding: 0px;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light";
+      }
+      #header {
+        width: 100%;
+        height: 45px;
+        border-top: 5px solid #D86046;
+        background-color: #F26C4F;
+        padding-top: 5px;
+      }
+      #logo {
+        height: 40px;
+        position: absolute 
+        left: 0;
+        top: 100%;
+      }
+      div.box {
+        text-align: center;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #333333;
+      }
+      div.title {
+        font-size: 30px;
+        font-weight: 100;
+        margin-bottom: 10px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+      div#cardImage {
+        position: relative;
+        min-width: 400px;
+        min-height: 400px;
+        overflow: hidden;
+      }
+      div#cardControls {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 94px;
+      }
+      .iconButton {
+        width: 32px;
+        height: 31px;
+        float: left;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      .iconButton.last {
+        margin-right: 0px;
+      }
+      .play {
+        background-image: url(app/assets/images/icon_play.png);
+      }
+      .play:hover {
+        background-image: url(app/assets/images/icon_play_hover.png);
+      }
+      .pause {
+        background-image: url(app/assets/images/icon_pause.png);
+      }
+      .pause:hover {
+        background-image: url(app/assets/images/icon_pause_hover.png);
+      }
+      .mute {
+        background-image: url(app/assets/images/icon_mute.png);
+      }
+      .mute:hover {
+        background-image: url(app/assets/images/icon_mute_hover.png);
+      }
+      div#cardMessage {
+        color: #FFFFFF;
+      }
+      div#cardDetails {
+        width: 100%;
+        color: #999999;
+        padding: 10px;
+      }
+      div#cardMessage {
+        
+      }
+      .details, .detail.nohover {
+        padding: 5px 10px;
+        background-color: #FFFFFF;
+        color: #F26C4F;
+        margin: 0 5px;
+      }
+      #properties {
+        border-top: 1px solid #000000;
+        padding-top: 10px;
+        margin-top: -30px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .details:hover {
+        background-color: #F26C4F;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+      #properties {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">
+        <img id="logo" src="app/assets/images/WOWlogo.png" alt="">
+      </div>
+
+      <div class="box">
+        <div class="title" id="cardTitle">COKE COKE COKE!</div>
+        <div id="cardImage">
+          <img class="cardImage" src="app/assets/images/samplePhoto.jpeg" alt="Sample photo">
+        </div>
+        <div id="cardControls">
+          <div class="center">
+            <span class="iconButton play"></span>
+            <!-- <span class="iconButton pause"></span> -->
+            <span class="iconButton mute last"></span>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div id="cardDetails">
+          <div id="cardMessage">
+            Please keep on partying, Coke Zero all the way!
+          </div>
+          <div id="properties">
+            Received from  <span id="senderName" class="details">Kim Does</span> on the <span id="cardDate" class="">28th of March 2014</span>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
