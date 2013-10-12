@@ -1,0 +1,24 @@
+<div class="box">
+<div class="title" id="cardTitle"><%= @card.name %></div>
+<div id="cardImage">
+  <!-- <img class="cardImage" src="app/assets/images/samplePhoto.jpeg" alt="Sample photo"> -->
+  <%= image_tag(@card.image, :class => "cardImage" ) if @card.image.present?%>
+  
+</div>
+<div id="cardControls">
+  <div class="center">
+    <span class="iconButton play"></span>
+    <!-- <span class="iconButton pause"></span> -->
+    <span class="iconButton mute last"></span>
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="cardDetails">
+  <div id="cardMessage">
+    <%= @card.message %>
+  </div>
+  <div id="properties">
+    WOW! from <span id="senderName" class="details">George Clooney</span> sent <span id="cardDate" class="">today</span>!
+  </div>
+</div>
+</div>

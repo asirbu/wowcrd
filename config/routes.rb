@@ -11,6 +11,7 @@ Sndcrd::Application.routes.draw do
   get '/cards/get_tracks/:id', to: 'cards#get_tracks', as: 'card_get_tracks'
   get '/cards/get_images/:id', to: 'cards#get_images', as: 'card_get_images'
   get 'cards/:id/display' => 'cards#display', as: :display
+  get 'cards/:id/succes' => 'cards#succes', as: :succes
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

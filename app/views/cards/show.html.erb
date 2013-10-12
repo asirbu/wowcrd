@@ -1,8 +1,16 @@
-<h1 class="demo-headline"><%= @card.name %></h1>
+<h1 class="demo-headline">Do Stuff<%#= @card.name %></h1>
 <p id="notice"><%= notice %></p>
 
+<h2>Who do you want to WOW!?</h2>
 <p>
-  <strong>Name:</strong>
+  <strong>Title:</strong>
+  <%#= @card.recepientName %>
+  <%#= @card.recepientMail %>
+</p>
+
+<h2>Design your WOW!</h2>
+<p>
+  <strong>Title:</strong>
   <%= @card.name %>
 </p>
 
@@ -32,5 +40,9 @@
 <%= link_to 'Get me a different track', card_get_tracks_path(@card), :class => "btn button-primary" %>
 
 <hr>
+
+<%= link_to 'Send this WOW!', succes_path, :class => "bigButton clickable" %>
+
+
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
