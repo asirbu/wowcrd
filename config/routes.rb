@@ -9,6 +9,7 @@ Sndcrd::Application.routes.draw do
   
   root to: 'cards#index'
   get '/cards/get_tracks/:id', to: 'cards#get_tracks', as: 'card_get_tracks'
+  get '/cards/get_images/:id', to: 'cards#get_images', as: 'card_get_images'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

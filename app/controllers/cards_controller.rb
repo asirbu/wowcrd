@@ -68,6 +68,13 @@ class CardsController < ApplicationController
     redirect_to request.referer
   end
 
+  def get_images
+    @card = Card.find(params[:id])
+    @card.get_images
+    @card.save!
+    redirect_to request.referer
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
