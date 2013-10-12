@@ -7,13 +7,11 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-		<div id="header">
-			<img id="logo" src="/assets/WOWLogo.png" alt="">
-		</div>
-	<div class="container">
-		<div class="demo-row">
-				<%= yield %>
-		</div>
-	</div><!-- /.demo-row -->
+	<div id="header">
+		<img id="logo" src="/assets/WOWLogo.png" alt="">
+	</div>
+	<div class="box">
+		<%= yield %>
+	</div>
 </body>
 </html>
