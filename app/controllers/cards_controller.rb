@@ -51,6 +51,10 @@ class CardsController < ApplicationController
     end
   end
 
+  def display
+     @card = Card.find(params[:id])
+  end
+
   # DELETE /cards/1
   # DELETE /cards/1.json
   def destroy
