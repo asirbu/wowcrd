@@ -61,6 +61,13 @@ class CardsController < ApplicationController
     end
   end
 
+  def get_tracks
+    @card = Card.find(params[:id])
+    @card.get_tracks
+    @card.save!
+    redirect_to request.referer
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
