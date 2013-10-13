@@ -68,6 +68,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailjet (0.0.5)
+      activesupport (>= 3.1.0)
+      rack (>= 1.4.0)
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.1)
@@ -143,6 +146,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
   jbuilder (~> 1.0.1)
   jquery-rails
+  mailjet
   rails (= 4.0.0.beta1)
   sass-rails (~> 4.0.0.beta1)
   soundcloud

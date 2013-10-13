@@ -71,16 +71,25 @@ class CardsController < ApplicationController
 
   def get_tracks
     @card = Card.find(params[:id])
-    @card.get_tracks
+    @card.get_tracks(@card.tag)
     @card.save!
     redirect_to request.referer
   end
 
   def get_images
     @card = Card.find(params[:id])
-    @card.get_images
+    @card.get_images(@card.tag)
     @card.save!
     redirect_to request.referer
+  end
+
+  def send_email
+    Mailjet.configure do |config|
+      config.api_key = 'AAA'
+      config.secret_key = 'AAA'
+      config.default_from = 'george_clooney@bgcodehack.com'
+    end
+    config.action_mailer.delivery_method = :mailjet
   end
 
   private

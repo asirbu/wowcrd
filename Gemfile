@@ -26,6 +26,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.0.1'
 gem 'soundcloud'
 gem 'EyeEmConnector'
+gem 'mailjet'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
