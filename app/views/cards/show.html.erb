@@ -1,38 +1,31 @@
 <div class="box">
-<h1 class="demo-headline">Do Stuff<%#= @card.name %></h1>
-<p id="notice"><%= notice %></p>
 
-<h2>Who do you want to WOW!?</h2>
-<p>
-  <strong>Title:</strong>
-  <%#= @card.recepientName %>
-  <%#= @card.recepientMail %>
-</p>
+<div class="block">
+  <h2>You are WOWing</h2>
+  <p>
+    <%#= @card.recepientName %>
+    <%#= @card.recepientMail %>
+  </p>
+</div>
 
-<h2>Design your WOW!</h2>
-<p>
-  <strong>Title:</strong>
-  <%= @card.name %>
-</p>
+<div class="block">
+  <h2><%= @card.name %></h2>
+  
+  <p>
+    <%= @card.message %>
+  </p>
 
-<p>
-  <strong>Tag:</strong>
-  <%= @card.tag %>
-</p>
+  <p>
+    <strong>Based on these tags:</strong>
+    <%= @card.tag %>
+  </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @card.message %>
-</p>
+  <div><%= image_tag(@card.image , :class => 'smallImage') if @card.image.present? %></div>
+  <%= link_to 'Get me a different image', card_get_images_path(@card), :class => "smallButton clickable" %>
 
-<hr>
-<div><%= image_tag(@card.image , :class => 'smallImage') if @card.image.present? %></div>
-<%= link_to 'Get me a different image', card_get_images_path(@card), :class => "smallButton clickable" %>
-
-<div><%= @card.sound.html_safe %></div>
-<%= link_to 'Get me a different track', card_get_tracks_path(@card), :class => "smallButton clickable" %>
-
-<hr>
+  <div><%= @card.sound.html_safe %></div>
+  <%= link_to 'Get me a different track', card_get_tracks_path(@card), :class => "smallButton clickable" %>
+</div>
 
 <%= link_to 'Send this WOW!', succes_path, :class => "bigButton clickable" %>
 </div>

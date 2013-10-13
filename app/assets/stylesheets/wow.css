@@ -132,15 +132,15 @@ a.smallButton, a.smallButton:visited {
   font-size: 100%;
   padding: 10px;
   margin: 10px;
-  background-color: #1B325F;
+  background-color: #3A89C9;
   display: inline-block;
   text-decoration: none;
-  color: #F26C4F; 
+  color: white;
+  border: 0;
 }
 
 a.smallButton:hover {
   background-color: #F26C4F;
-  color: #1B325F; 
 }
 
 th, td {
@@ -211,4 +211,12 @@ table {
 /*Default hidden*/
 #cardHistory {
   /*display: block;*/
+}
+.block {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000000;
+}
+.hidden {
+  display: none;
 }
