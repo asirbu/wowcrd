@@ -220,3 +220,14 @@ table {
 .hidden {
   display: none;
 }
+
+h2 {
+  text-align: left;
+  padding-left: 20px
+}
+
+p {
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
