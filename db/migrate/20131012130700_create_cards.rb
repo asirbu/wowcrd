@@ -6,6 +6,9 @@ class CreateCards < ActiveRecord::Migration
       t.string :message
       t.string :image
       t.string :sound
+      t.string :r_name
+      t.string :r_email
+      t.string :track_id
 
       t.timestamps
     end

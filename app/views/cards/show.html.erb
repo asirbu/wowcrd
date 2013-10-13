@@ -3,8 +3,8 @@
 <div class="block">
   <h2>You are WOWing</h2>
   <p>
-    <%#= @card.recepientName %>
-    <%#= @card.recepientMail %>
+    <%= @card.r_name %>
+    <%= @card.r_email %>
   </p>
 </div>
 
@@ -28,4 +28,5 @@
 </div>
 
 <%= link_to 'Send this WOW!', succes_path, :class => "bigButton clickable" %>
+
 </div>

@@ -1,4 +1,8 @@
 class Card < ActiveRecord::Base
+	validates_presence_of :name
+	validates_presence_of :tag
+	validates_presence_of :message
+
 
 	def get_tracks(tags='birthday')
 		# create client object with app credentials

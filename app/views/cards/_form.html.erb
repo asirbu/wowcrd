@@ -11,17 +11,28 @@
     </div>
   <% end %>
 
+   <h2>Who should get your WOW!</h2>
+  <div class="field">
+    <%= f.label 'Name' %><br />
+    <%= f.text_field :r_name %>
+  </div>
+  <div class="field">
+    <%= f.label 'Email' %><br />
+    <%= f.text_field :r_email %>
+  </div>
+
+  <h2>WOW title</h2>
   <div class="field">
     <%= f.label 'Title' %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :tag %><br />
-    <%= f.text_field :tag %>
-  </div>
-  <div class="field">
     <%= f.label :message %><br />
     <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
   </div>
   <div class="hidden">
     <div class="field">
