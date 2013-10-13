@@ -26,25 +26,13 @@
 </p>
 
 <hr>
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@card.image) if @card.image.present? %>
-</p>
-<%= link_to 'Get me a different image', card_get_images_path(@card), :class => "btn button-primary" %>
-<hr>
+<div><%= image_tag(@card.image , :class => 'smallImage') if @card.image.present? %></div>
+<%= link_to 'Get me a different image', card_get_images_path(@card), :class => "smallButton clickable" %>
 
-<p>
-  <strong>Sound:</strong>
-  <%= @card.sound.html_safe %>
-</p>
-
-<%= link_to 'Get me a different track', card_get_tracks_path(@card), :class => "btn button-primary" %>
+<div><%= @card.sound.html_safe %></div>
+<%= link_to 'Get me a different track', card_get_tracks_path(@card), :class => "smallButton clickable" %>
 
 <hr>
 
 <%= link_to 'Send this WOW!', succes_path, :class => "bigButton clickable" %>
-
-
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
 </div>

@@ -203,7 +203,9 @@ table {
   width: 100%;
   clear: both;
 }
-
+.smallImage {
+  width: 200px;
+}
 /*Defaults*/
 
 /*Default hidden*/
