@@ -5,8 +5,8 @@
 <h2>Who do you want to WOW!?</h2>
 <p>
   <strong>Title:</strong>
-  <%#= @card.recepientName %>
-  <%#= @card.recepientMail %>
+  <%= @card.r_name %>
+  <%= @card.r_email %>
 </p>
 
 <h2>Design your WOW!</h2>
@@ -35,4 +35,5 @@
 <hr>
 
 <%= link_to 'Send this WOW!', succes_path, :class => "bigButton clickable" %>
+
 </div>
