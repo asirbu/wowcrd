@@ -25,6 +25,8 @@ class CardsController < ApplicationController
   # POST /cards.json
   def create
     @card = Card.new(card_params)
+    @card.get_tracks(card_params[:tag])
+    @card.get_images(card_params[:tag])
 
     respond_to do |format|
       if @card.save
