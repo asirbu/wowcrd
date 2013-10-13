@@ -10,6 +10,7 @@ Sndcrd::Application.routes.draw do
   root to: 'cards#index'
   get '/cards/get_tracks/:id', to: 'cards#get_tracks', as: 'card_get_tracks'
   get '/cards/get_images/:id', to: 'cards#get_images', as: 'card_get_images'
+  get '/cards/send_email/:id', to: 'cards#send_email', as: 'card_send_email'
   get 'cards/:id/display' => 'cards#display', as: :display
   get 'cards/:id/succes' => 'cards#succes', as: :succes
 

@@ -86,12 +86,9 @@ class CardsController < ApplicationController
   end
 
   def send_email
-    Mailjet.configure do |config|
-      config.api_key = 'AAA'
-      config.secret_key = 'AAA'
-      config.default_from = 'george_clooney@bgcodehack.com'
-    end
-    config.action_mailer.delivery_method = :mailjet
+    @card = Card.find(params[:id])
+    @card.send_email(@card.r_email, @card.name, @card.id)
+    redirect_to success_path
   end
 
   private

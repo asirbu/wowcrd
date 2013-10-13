@@ -27,6 +27,6 @@
   <%= link_to 'Get me a different track', card_get_tracks_path(@card), :class => "smallButton clickable" %>
 </div>
 
-<%= link_to 'Send this WOW!', succes_path, :class => "bigButton clickable" %>
+<%= link_to 'Send this WOW!', card_send_email_path(@card), :class => "bigButton clickable" %>
 
 </div>
