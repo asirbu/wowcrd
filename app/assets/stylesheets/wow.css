@@ -115,7 +115,7 @@ div#cardMessage {
 .clickable {
   cursor: pointer;
 }
-.bigButton {
+a.bigButton {
   font-size: 120%;
   padding: 30px;
   margin: 20px;
@@ -124,8 +124,17 @@ div#cardMessage {
   text-decoration: none;
   color: white;
 }
-.bigButton:hover {
+a.bigButton:hover {
   background-color: #F26C4F;
+}
+a.smallButton, a.smallButton:visited {
+  font-size: 100%;
+  padding: 10px;
+  margin: 10px;
+  background-color: #1B325F;
+  display: inline-block;
+  text-decoration: none;
+  color: #F26C4F; 
 }
 
 /*Fix some basics*/
@@ -169,5 +178,5 @@ table {
 
 /*Default hidden*/
 #cardHistory {
-  display: none;
+  /*display: block;*/
 }
