@@ -17,6 +17,11 @@ class CardsController < ApplicationController
     @card = Card.new
   end
 
+  def dancer_visualise
+    @card = Card.find(params[:id])
+    render layout: false
+  end
+
   # GET /cards/1/edit
   def edit
   end
@@ -88,7 +93,7 @@ class CardsController < ApplicationController
   def send_email
     @card = Card.find(params[:id])
     @card.send_email(@card.r_email, @card.name, @card.id)
-    redirect_to success_path
+    redirect_to succes_path
   end
 
   private

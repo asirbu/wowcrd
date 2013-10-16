@@ -38,11 +38,11 @@ class Card < ActiveRecord::Base
 		end
 
 		sorted = items.sort_by {|likes| likes["totalLikers"] }
-		nr = 10
-		if sorted.length < 10
+		nr = 30
+		if sorted.length < 30
 			nr = sorted.length
 		end
-		random_image = rand(10)
+		random_image = rand(nr)
 		item = sorted.at(sorted.length - random_image)
 		array = item["thumbUrl"].split("/200/")
 
