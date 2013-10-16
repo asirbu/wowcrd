@@ -6,7 +6,9 @@ class Card < ActiveRecord::Base
 
 	def get_tracks(tags='birthday')
 	  # create client object with app credentials
-	  client = Soundcloud.new(:client_id => 'AAA', :client_secret => 'AAA', :redirect_uri => 'localhost')
+	  client = Soundcloud.new(:client_id => SECRETS['soundcloud']['client_id'],
+	  	                      :client_secret => SECRETS['soundcloud']['client_secret'],
+	  	                      :redirect_uri => 'localhost')
 
 	  tag_array = tags.split(",")
 	  first_tag = tag_array[0]
@@ -21,9 +23,10 @@ class Card < ActiveRecord::Base
 
 
 	def get_images(tags='birthdaycake, geburtstagskind, baloons')
-		EyeEmConnector.configure do |config| config.client_id = 'ZZZ'
-			config.client_secret = 'AAA'
-			config.access_token = 'AAA'
+		EyeEmConnector.configure do |config|
+			config.client_id     = SECRETS['eyeem']['client_id']
+			config.client_secret = SECRETS['eyeem']['client_secret']
+			config.access_token  = SECRETS['eyeem']['access_token']
 		end
 
 		items = []
@@ -52,8 +55,8 @@ class Card < ActiveRecord::Base
 
   	def send_email(r_email, title, card_id)
     	Mailjet.configure do |config|
-    		config.api_key = 'AAA'
-      		config.secret_key = 'AAA'
+    		config.api_key      = SECRETS['mailjet']['api_key']
+      		config.secret_key   = SECRETS['mailjet']['secret_key']
       		config.default_from = 'george_clooney@bgcodehack.com'
     	end
     list = Mailjet::List.all.find{|l| l.id == "437219" }
